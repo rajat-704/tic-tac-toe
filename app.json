@@ -1,17 +1,15 @@
 {
-  "name": "tic-tac-toe",
-  "displayName": "tic-tac-toe",
-  "expo": {
-    "name": "tic-tac-toe",
-    "slug": "tic-tac-toe",
-    "version": "1.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
-    "assetBundlePatterns": [
-      "**/*"
-    ]
-  }
+    "expo": {
+      "sdkVersion": "36.0.0",
+      "name": "tic-tac-toe",
+      "icon": "./icon.png",
+      "version": "1.0.0",
+      "slug": "tic-tac-toe",
+      "ios": {
+        "bundleIdentifier": "net.game.tictactoe"
+      },
+      "android": {
+        "package": "net.game.tictactoe"
+      }
+    }
 }

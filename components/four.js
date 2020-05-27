@@ -115,31 +115,31 @@ class four extends React.Component {
       <View style={styles.container}>
 
         <View style={{ flexDirection: "row" }}>
-          <TouchableOpacity onPress={ () => this.onTilePress(0, 0) } style={styles.title}>{this.renderIcon(0, 0)}</TouchableOpacity>
-          <TouchableOpacity onPress={ () => this.onTilePress(0, 1) } style={styles.title}>{this.renderIcon(0, 1)}</TouchableOpacity>
-          <TouchableOpacity onPress={ () => this.onTilePress(0, 2) } style={styles.title}>{this.renderIcon(0, 2)}</TouchableOpacity>
-          <TouchableOpacity onPress={ () => this.onTilePress(0, 3) } style={styles.title}>{this.renderIcon(0, 3)}</TouchableOpacity>
+          <TouchableOpacity onPress={ () => this.onTilePress(0, 0) } style={[styles.title, { borderLeftWidth: 0, borderTopWidth: 0}]}>{this.renderIcon(0, 0)}</TouchableOpacity>
+          <TouchableOpacity onPress={ () => this.onTilePress(0, 1) } style={[styles.title, {borderTopWidth: 0}]}>{this.renderIcon(0, 1)}</TouchableOpacity>
+          <TouchableOpacity onPress={ () => this.onTilePress(0, 2) } style={[styles.title, {borderTopWidth: 0}]}>{this.renderIcon(0, 2)}</TouchableOpacity>
+          <TouchableOpacity onPress={ () => this.onTilePress(0, 3) } style={[styles.title, {borderRightWidth: 0, borderTopWidth: 0}]}>{this.renderIcon(0, 3)}</TouchableOpacity>
         </View>
 
         <View style={{ flexDirection: "row" }}>
-          <TouchableOpacity onPress={ () => this.onTilePress(1, 0) } style={styles.title}>{this.renderIcon(1, 0)}</TouchableOpacity>
+          <TouchableOpacity onPress={ () => this.onTilePress(1, 0) } style={[styles.title, {borderLeftWidth: 0}]}>{this.renderIcon(1, 0)}</TouchableOpacity>
           <TouchableOpacity onPress={ () => this.onTilePress(1, 1) } style={styles.title}>{this.renderIcon(1, 1)}</TouchableOpacity>
           <TouchableOpacity onPress={ () => this.onTilePress(1, 2) } style={styles.title}>{this.renderIcon(1, 2)}</TouchableOpacity>
-          <TouchableOpacity onPress={ () => this.onTilePress(1, 3) } style={styles.title}>{this.renderIcon(1, 3)}</TouchableOpacity>
+          <TouchableOpacity onPress={ () => this.onTilePress(1, 3) } style={[styles.title, {borderRightWidth: 0}]}>{this.renderIcon(1, 3)}</TouchableOpacity>
         </View>
 
         <View style={{ flexDirection: "row" }}>
-          <TouchableOpacity onPress={ () => this.onTilePress(2, 0) } style={styles.title}>{this.renderIcon(2, 0)}</TouchableOpacity>
+          <TouchableOpacity onPress={ () => this.onTilePress(2, 0) } style={[styles.title, {borderLeftWidth: 0}]}>{this.renderIcon(2, 0)}</TouchableOpacity>
           <TouchableOpacity onPress={ () => this.onTilePress(2, 1) } style={styles.title}>{this.renderIcon(2, 1)}</TouchableOpacity>
           <TouchableOpacity onPress={ () => this.onTilePress(2, 2) } style={styles.title}>{this.renderIcon(2, 2)}</TouchableOpacity>
-          <TouchableOpacity onPress={ () => this.onTilePress(2, 3) } style={styles.title}>{this.renderIcon(2, 3)}</TouchableOpacity>
+          <TouchableOpacity onPress={ () => this.onTilePress(2, 3) } style={[styles.title, {borderRightWidth: 0}]}>{this.renderIcon(2, 3)}</TouchableOpacity>
         </View>
 
         <View style={{ flexDirection: "row" }}>
-          <TouchableOpacity onPress={ () => this.onTilePress(3, 0) } style={styles.title}>{this.renderIcon(3, 0)}</TouchableOpacity>
-          <TouchableOpacity onPress={ () => this.onTilePress(3, 1) } style={styles.title}>{this.renderIcon(3, 1)}</TouchableOpacity>
-          <TouchableOpacity onPress={ () => this.onTilePress(3, 2) } style={styles.title}>{this.renderIcon(3, 2)}</TouchableOpacity>
-          <TouchableOpacity onPress={ () => this.onTilePress(3, 3) } style={styles.title}>{this.renderIcon(3, 3)}</TouchableOpacity>
+          <TouchableOpacity onPress={ () => this.onTilePress(3, 0) } style={[styles.title, {borderLeftWidth: 0, borderBottomWidth: 0}]}>{this.renderIcon(3, 0)}</TouchableOpacity>
+          <TouchableOpacity onPress={ () => this.onTilePress(3, 1) } style={[styles.title, { borderBottomWidth: 0}]}>{this.renderIcon(3, 1)}</TouchableOpacity>
+          <TouchableOpacity onPress={ () => this.onTilePress(3, 2) } style={[styles.title, { borderBottomWidth: 0}]}>{this.renderIcon(3, 2)}</TouchableOpacity>
+          <TouchableOpacity onPress={ () => this.onTilePress(3, 3) } style={[styles.title, {borderRightWidth: 0, borderBottomWidth: 0}]}>{this.renderIcon(3, 3)}</TouchableOpacity>
         </View>
 
       </View>
@@ -150,27 +150,28 @@ class four extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#23C4E4',
     alignItems: 'center',
     justifyContent: 'center',
   },
 
   title: {
-    borderWidth: 1,
+    borderWidth: 5,
+    borderColor: '#fff',
     width: 80,
     height: 80
   },
 
   tileX: {
-    color: "red",
+    color: "#084B83",
     fontSize: 80,
     flex: 1,
   },
 
   tileO: {
-    marginLeft: 10,
-    marginTop: 10,
-    color: "red",
+    marginLeft: 6,
+    marginTop: 6,
+    color: "#084B83",
     fontSize: 60,
   }
 });
