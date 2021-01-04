@@ -2,7 +2,6 @@
     "expo": {
       "sdkVersion": "36.0.0",
       "name": "tic-tac-toe",
-      "icon": "./icon.png",
       "version": "1.0.0",
       "slug": "tic-tac-toe",
       "ios": {

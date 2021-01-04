@@ -36,6 +36,16 @@ class three extends React.Component {
     });
   }
 
+  // Sound = require('react-native-sound')
+
+  // track = new Sound('sound.mp3', null, (error) => {
+  //   if (error)
+  //     console.log("Can't play sound. ", e);
+  //   else
+  //     track.play();
+  // });
+
+
   getWinner = () => {
     const NUM_TILES = 3;
     var arr = this.state.gameState;

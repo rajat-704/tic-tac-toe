@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Platform } from 'react-native';
+import { View } from 'react-native';
 import { Icon } from 'react-native-elements';
 import Four from './four';
 import Three from './three';
@@ -8,7 +8,6 @@ import Home from './home';
 import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 import Contact from './ContactComponent';
 import Play from './play';
-import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 //play Navigator
 const PlayNavigator = createStackNavigator(
@@ -70,9 +69,36 @@ const MenuNavigator = createStackNavigator(
           headerTintColor: "#fff"
         })
     },
-    Three: { screen: Three },
-    Four: { screen: Four },
-    Fourforthree: { screen: Fourforthree }
+    Three: { screen: Three,
+      navigationOptions: ({ navigation }) => ({
+        headerStyle: {
+          backgroundColor: "#23C4E4",
+        },
+        headerTitleStyle: {
+          color: "#fff"
+        },
+        headerTintColor: "#fff"
+      }) },
+    Four: { screen: Four,
+      navigationOptions: ({ navigation }) => ({
+        headerStyle: {
+          backgroundColor: "#23C4E4",
+        },
+        headerTitleStyle: {
+          color: "#fff"
+        },
+        headerTintColor: "#fff"
+      }) },
+    Fourforthree: { screen: Fourforthree,
+      navigationOptions: ({ navigation }) => ({
+        headerStyle: {
+          backgroundColor: "#23C4E4",
+        },
+        headerTitleStyle: {
+          color: "#fff"
+        },
+        headerTintColor: "#fff"
+      }) }
   }, );
 
 // drawer navigator
@@ -140,7 +166,7 @@ const Drawer = createDrawerNavigator({
 class Handler extends React.Component {
   render() {
     return (
-      <View style={{flex:1,paddingTop:getStatusBarHeight(), backgroundColor: '#23C4E4'}}>
+      <View style={{flex:1, backgroundColor: '#23C4E4'}}>
         <Drawer />
       </View>
     );

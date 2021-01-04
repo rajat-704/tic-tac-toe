@@ -21,11 +21,8 @@ class App extends React.Component {
         );
       }
 
-      async componentDidMount() {
-        // Preload data from an external API
-        // Preload data using AsyncStorage
+      async componentWillMount() {
         const data = await this.performTimeConsumingTask();
-      
         if (data !== null) {
           this.setState({ isLoading: false });
         }
